@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
+  get '/members' => 'welcome#members'
+  get '/sportsbooks' => 'welcome#sportsbooks'
+  get '/tutorials' => 'welcome#tuts'
   
   root 'welcome#index'
 
