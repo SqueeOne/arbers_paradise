@@ -1,3 +1,33 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+/* NAVIGATION STYLES */
+.navbar-custom {
+    margin-bottom:0 !important;
+}
+
+.welcome-poster {
+    background: #41295a; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #41295a , #2F0743); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #41295a , #2F0743); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin-top:0;
+    border-bottom:#9972C2 1px solid !important;
+}
+
+.welcome-poster-logo {
+    font-size:36px;
+    font-weight:900;
+    margin-top:20%;
+    color:#fff;
+}
+
+.main-heading,
+.main-cta,
+.sub-cta {
+    color: #fff;
+}
+
+.sub-cta {
+    margin-top:20px;
+    font-size:13px;
+}
