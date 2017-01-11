@@ -46,3 +46,22 @@
 .register-form {
     margin-top: 40px;
 }
+
+.login-link {
+    margin-top:60px;
+    display: block;
+    text-align: right;
+}
+
+.login-link {
+    font-size: 12px;
+    font-weight:500;
+}
+
+.login-link:hover {
+    text-decoration: none;
+}
+
+.forgot-pass {
+    margin-top:-16px !important;
+}
