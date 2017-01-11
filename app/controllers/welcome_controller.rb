@@ -8,7 +8,4 @@ class WelcomeController < ApplicationController
   def sportsbooks
   end
   
-  def members
-  end
-  
 end
