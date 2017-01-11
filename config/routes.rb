@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get '/members' => 'welcome#members'
+  resources :members
+  
   get '/sportsbooks' => 'welcome#sportsbooks'
   get '/tutorials' => 'welcome#tuts'
   
