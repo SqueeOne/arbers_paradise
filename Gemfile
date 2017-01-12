@@ -34,7 +34,7 @@ gem 'coffee-rails', '~> 4.2'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
+# gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
@@ -63,6 +63,13 @@ group :development do
 end
 
 gem 'devise'
+
+# Using skrill-payment https://rubygems.org/gems/skrill-payment/versions/0.3.3 for Skrill payments
+gem 'skrill-payment', '~> 0.3.3'
+
+# Production dependancies for skrill-payments
+gem 'rspec', '~> 3.5'
+gem 'webmock', '~> 2.3', '>= 2.3.2'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
