@@ -31,7 +31,7 @@
                 <h2 class="text-center">BASIC</h2>
                 <h4>Become a member and get access to teching videos aimed at the beginner level</h4>
                 <p>Choose this option if you have a bankroll of $/€ 5000 or less.</p><br />
-                <%= link_to "Choose the Basic plan", new_user_registration_path, class: 'btn btn-primary btn-lg btn-block' %>
+                <%= link_to "Choose the Basic plan", new_user_registration_path(plan: @basic_plan.id), class: 'btn btn-primary btn-lg btn-block' %>
             </div>
         </div>
         <div class="col-md-4">
@@ -39,7 +39,7 @@
                 <h2 class="text-center">INTERMEDIATE</h2>
                 <h4>Become a member and get access to teching videos aimed at the intermediate level</h4>
                 <p>Choose this option if your bankroll is somewhere between $/€ 5000 - 20000.</p>
-                <%= link_to "Choose the Intermediate plan", new_user_registration_path, class: 'btn btn-success btn-lg btn-block' %>
+                <%= link_to "Choose the Intermediate plan", new_user_registration_path(plan: @intermediate_plan.id), class: 'btn btn-success btn-lg btn-block' %>
             </div>
         </div>
         <div class="col-md-4">
@@ -47,7 +47,7 @@
                 <h2 class="text-center">ADVANCED</h2>
                 <h4>Become a member and get access to teching videos aimed at the advanced level</h4>
                 <p>Chose this option if your bankroll exceeds $/€ 20000</p><br /><br />
-                <%= link_to "Choose the Advanced plan", new_user_registration_path, class: 'btn btn-danger btn-lg btn-block' %>
+                <%= link_to "Choose the Advanced plan", new_user_registration_path(plan: @advanced_plan.id), class: 'btn btn-danger btn-lg btn-block' %>
             </div>
         </div>
     </div>
