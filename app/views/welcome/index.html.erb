@@ -24,12 +24,31 @@
     </div>
 </div>
 <div class="container-fluid">
+    <h2 class="text-center">Choose a membership plan and start beating the odds!</h2>
     <div class="row">
-        <div class="col-md-9">
-            <h2>News about bookies, arbing, betting and sports in general.</h2>
+        <div class="col-md-4">
+            <div class="well">
+                <h2 class="text-center">BASIC</h2>
+                <h4>Become a member and get access to teching videos aimed at the beginner level</h4>
+                <p>Choose this option if you have a bankroll of $/€ 5000 or less.</p><br />
+                <%= link_to "Choose the Basic plan", new_user_registration_path, class: 'btn btn-primary btn-lg btn-block' %>
+            </div>
         </div>
-        <div class="col-md-3">
-            <h2>Place for banners</h2>
+        <div class="col-md-4">
+            <div class="well">
+                <h2 class="text-center">INTERMEDIATE</h2>
+                <h4>Become a member and get access to teching videos aimed at the intermediate level</h4>
+                <p>Choose this option if your bankroll is somewhere between $/€ 5000 - 20000.</p>
+                <%= link_to "Choose the Intermediate plan", new_user_registration_path, class: 'btn btn-success btn-lg btn-block' %>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="well">
+                <h2 class="text-center">ADVANCED</h2>
+                <h4>Become a member and get access to teching videos aimed at the advanced level</h4>
+                <p>Chose this option if your bankroll exceeds $/€ 20000</p><br /><br />
+                <%= link_to "Choose the Advanced plan", new_user_registration_path, class: 'btn btn-danger btn-lg btn-block' %>
+            </div>
         </div>
     </div>
 </div>
