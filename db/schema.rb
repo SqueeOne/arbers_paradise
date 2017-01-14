@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170113114846) do
+ActiveRecord::Schema.define(version: 20170114124032) do
 
   create_table "members", force: :cascade do |t|
     t.string   "name"
@@ -47,12 +47,13 @@ ActiveRecord::Schema.define(version: 20170113114846) do
 
   create_table "videos", force: :cascade do |t|
     t.string   "name"
+    t.text     "video_url"
+    t.text     "video_img"
     t.text     "synopsis"
     t.text     "full_text"
-    t.integer  "plan_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["plan_id"], name: "index_videos_on_plan_id"
+    t.integer  "plan_id"
   end
 
 end

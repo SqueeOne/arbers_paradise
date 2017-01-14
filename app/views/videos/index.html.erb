@@ -1,0 +1,9 @@
+<div class="row">
+    <div class="col-md-6 col-md-offset-3 text-center">
+        <h2>Videos</h2>
+        <h3>Videos available are:</h3>
+        <% @videos.each do |v| %>
+            <p><%= v.name %></p>
+        <% end %>
+    </div>
+</div>
