@@ -1,0 +1,27 @@
+/* Stylings for the members section sidebar */
+
+.custom-sidebar {
+    background-color: #ECE9F0;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.sidebar-title {
+    background-color: #E0D5EB;
+    padding: 15px;
+}
+
+.sidebar-title-text {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #2F2E30;
+}
+
+.sidebar-desc-text {
+    font-size: 1.6rem;
+    font-weight:300;
+}
+
+.custom-sidebar {
+    height: calc(100vh - 54px);
+}

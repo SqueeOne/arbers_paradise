@@ -1,9 +1,31 @@
-<div class="row">
-    <div class="col-md-6 col-md-offset-3 text-center">
-        <h2>Videos</h2>
-        <h3>Videos available are:</h3>
-        <% @videos.each do |v| %>
-            <p><%= v.name %></p>
-        <% end %>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 col-md-3 sidebar custom-sidebar">
+            <div class="sidebar-title">
+                <% if current_user.plan_id == '1' %>
+                    <h3 class="sidebar-title-text">BASIC VIDEO SECTION</h3>
+                    <h4 class="sidebar-desc-text">Literally keytar iPhone, trust fund stumptown heirloom chartreuse shabby chic cronut YOLO slow-carb actually vaporware.</h4>
+                <% elsif current_user.plan_id == '2' %>
+                    <h3 class="sidebar-title-text">INTERMEDIATE VIDEO SECTION</h3>
+                    <h4 class="sidebar-desc-text">Literally keytar iPhone, trust fund stumptown heirloom chartreuse shabby chic cronut YOLO slow-carb actually vaporware.</h4>
+                <% else %>
+                    <h3 class="sidebar-title-text">ADVANCED VIDEO SECTION</h3>
+                    <h4 class="sidebar-desc-text">Literally keytar iPhone, trust fund stumptown heirloom chartreuse shabby chic cronut YOLO slow-carb actually vaporware.</h4>
+                <% end %>
+            </div>
+            <% @sections.each do |s| %>
+                <ul>
+                    <h4><%= s.title %></h4>
+                    <% @videos.each do |v| %>
+                        <% if v.section_id == s.id %>
+                            <li><%= v.name %></li>
+                        <% end %>
+                    <% end %>
+                </ul>
+            <% end %>
+        </div>
+        <div class="col-sm-9 col-md-9">
+            <h2 class="text-center"></h2>
+        </div>
     </div>
 </div>

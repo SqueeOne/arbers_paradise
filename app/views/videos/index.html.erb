@@ -1,9 +1,26 @@
-<div class="row">
-    <div class="col-md-6 col-md-offset-3 text-center">
-        <h2>Videos</h2>
-        <h3>Videos available are:</h3>
-        <% @videos.each do |v| %>
-            <p><%= v.name %></p>
-        <% end %>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2 col-md-3 sidebar custom-sidebar">
+            
+        </div>
+        <div class="col-md-8">
+            <% if current_user.plan_id == 1 %>
+                <h2>Basic Curriculum</h2>
+            <% elsif current_user.plan_id == 2 %>
+                <h2>Intermediate Curriculum</h2>
+            <% else %>
+                <h2>Advanced Curriculum</h2>
+            <% end %>
+            <div class="list-group">
+                <% @sections.each do |s| %>
+                    <button type="button" class="list-group-item list-group-item-action list-title" disabled><%= s.title %></button>
+                    <% @videos.each do |v| %>
+                        <% if v.section_id == s.id %>
+                            <%= link_to v.name, video_path(id: v.id), class: 'list-group-item list-group-item-action custom-list-item' %>
+                        <% end %>
+                    <% end %>
+                <% end %>
+            </div>
+        </div>
     </div>
 </div>

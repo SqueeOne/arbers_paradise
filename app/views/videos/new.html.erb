@@ -1,0 +1,41 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="well register-form">
+                <%= form_for @video do |f| %>
+                    <div class="field form-group">
+                      <%= f.label :name %><br />
+                      <%= f.text_field :name, autofocus: true, class: 'form-control' %>
+                    </div>
+                    <div class="field form-group">
+                      <%= f.label :video_url %><br />
+                      <%= f.text_field :video_url, autofocus: true, class: 'form-control' %>
+                    </div>
+                    <div class="field form-group">
+                      <%= f.label :video_img %><br />
+                      <%= f.text_field :video_img, autofocus: true, class: 'form-control' %>
+                    </div>
+                    <div class="field form-group">
+                      <%= f.label :synopsis %><br />
+                      <%= f.text_area :synopsis, autofocus: true, class: 'form-control' %>
+                    </div>
+                    <div class="field form-group">
+                      <%= f.label :full_text %><br />
+                      <%= f.text_area :full_text, autofocus: true, class: 'form-control' %>
+                    </div>
+                    <div class="field form-group">
+                      <%= f.label :plan_id %><br />
+                      <%= f.select(:plan_id, options_for_select([['Basic', 1], ['Intermediate', 2], ['Advanced', 3]]), class: 'form-control') %>
+                    </div>
+                    <div class="field form-group">
+                      <%= f.label :section_id %><br />
+                      <%= f.select(:section_id, options_for_select([[1], [2], [3]]), class: 'form-control') %>
+                    </div>
+                    <div class="actions form-group">
+                      <%= f.submit "Add video", class: 'btn btn-success pull-right', id: 'form-submit-btn' %>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>

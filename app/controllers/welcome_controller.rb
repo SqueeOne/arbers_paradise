@@ -12,12 +12,7 @@ class WelcomeController < ApplicationController
   end
   
   def videos
-    if current_user
-      @plan_id = current_user.plan_id
-      @videos = Video.where("plan_id = ?", @plan_id)
-    else
-      @videos = Video.where("plan_id = '1'")
-    end
+   
   end
   
 end

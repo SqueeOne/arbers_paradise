@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'users/registrations' }
+  resources :videos
   
-  get '/videos' => 'welcome#videos'
   get '/sportsbooks' => 'welcome#sportsbooks'
   get '/tutorials' => 'welcome#tuts'
   
